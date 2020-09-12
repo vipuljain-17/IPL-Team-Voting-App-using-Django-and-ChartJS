@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from .forms import PollForm, QuestionForm
@@ -21,8 +21,7 @@ def home_view(request, *args, **kwargs):
         if form.is_valid():
             form.save()
 
-            total,a = give()
-            return render(request,"result.html",{"total":total,"a": a})
+            return redirect(result_view)
     
     form = QuestionForm()
     context = {"form":form}
