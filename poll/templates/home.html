@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title %}IPL 2020 Vote{% endblock title %}
+
+{%block style_block%}
+.body-main form{
+    color: black;
+    font-size: x-large;
+    padding-top: 25px;
+	text-align: center;
+}
+.button-class{
+  background-color: white;
+  color: black;
+  border: 2px solid #990000;
+  border-radius: 4px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+{%endblock%}
+
+{% block main %}
+<h1>Vote for your Fav IPL Team</h1>
+<div class="body-main">
+    <form method="POST" style="margin-left:auto;margin-right:auto;">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="button-class">Vote</button>
+    </form>
+</div>
+{% endblock main %}

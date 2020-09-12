@@ -1,0 +1,73 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title %}IPL 2020 Vote{% endblock title %}
+
+{%block style_block%}
+.main-text {
+	padding-top: 25px;
+	text-align: center;
+	color: white;
+    height: 980px;
+}
+.button{
+    background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.main-image {
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{%static "img/ipl_banner.jpg"%}");
+
+  height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.main-content{
+    padding-top: 50px;
+    width: 75%;
+    position: relative;
+    margin: auto;
+}
+.main-content h2{
+    text-shadow: 2px 2px #000;
+    font-size: xx-large;
+}
+.main-content p{
+    font-size: large;
+    color: black;
+    background-color: #00FF7F;
+}
+{%endblock%}
+
+{% block main %}
+<div class="body">
+    <div class="main-image">
+        <div class="main-text">
+            <h1>IPL 2020 Voting Poll(Django App)</h1>
+            <p>Vote for your Fav. team</p>
+            <a href="https://www.iplt20.com/" target="_blank" class="button">Go to IPL(official website)</a>
+            <div class="main-content">
+                <h2>About the project</h2>
+                <p>The IPL-2020 is coming near and will start on 19th sept 2020. As it begins, all the fans will start wishing their team all of our luck for their victory. To see which team has most popular fanbase.
+                    I have created a small Django project call IPL2020 poll. You can poll for your fav team and let's see how much support your fav team can get. <br><br><strong>So start voting by clicking on vote button on top</strong><br><br>The main purpose of this project was to learn how to learn how to use Django, to build a polling app. To built this we have used sqlite3 as a our database.
+                    For chart, we have used Chart.JS for visualization of result.    
+                </p>
+                <h2>About me(The developer)</h2>
+                <p>
+                    Hey, Vipul Jain here, hope you enjoyed voting for your team. <br>A Third-year CSE student.<br>An aspiring data scientist.<br>That's it for now.<br>
+                    (PS: If you have any idea/problem regarding this project reach out to me using LinkedIN, Also all files for this project is given in my GitHub)<br><br> 
+                    <br>Follow me on social platforms:
+                </p>
+                <a href="https://www.linkedin.com/in/vipul-jain-2000/" target="_blank" class="button">LinkedIN</a>
+                <a href="https://github.com/vipuljain-17" target="_blank" class="button">GitHub</a>
+                <a href="https://twitter.com/mrvipul17" target="_blank" class="button">Twitter</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
