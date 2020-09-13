@@ -1,3 +1,4 @@
 /secret_key.txt
-*.bak
 *.sqlite3
+/ipl_poll/__pycache__/*
+/poll/__pycache__/*
